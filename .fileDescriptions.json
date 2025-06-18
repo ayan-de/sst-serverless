@@ -5826,5 +5826,20 @@
   ".sst/pulumi/fe687afee97639c94d409001/eventlog.json": "TODO: Add description",
   ".sst/artifacts/ApiRouteDnvusbHandler-src": "TODO: Add description",
   ".sst/pulumi/fe687afee97639c94d409001/.pulumi/backups": "TODO: Add description",
-  ".sst/pulumi/fe687afee97639c94d409001/.pulumi/history": "TODO: Add description"
+  ".sst/pulumi/fe687afee97639c94d409001/.pulumi/history": "TODO: Add description",
+  ".git/COMMIT_EDITMSG": "TODO: Add description",
+  ".git/refs/heads/main": "TODO: Add description",
+  ".git/refs/remotes/origin/main": "TODO: Add description",
+  ".git/logs/refs/remotes/origin/main": "TODO: Add description",
+  ".sst/ayande.server": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/Pulumi.yaml": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/eventlog.json": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi/meta.yaml": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi/meta.yaml.attrs": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/Pulumi.ayande.yaml": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi/locks": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi/backups": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi/history": "TODO: Add description",
+  ".sst/pulumi/fe687afbc10924a81913cc28/.pulumi/history/sst-serverless": "TODO: Add description"
 }
