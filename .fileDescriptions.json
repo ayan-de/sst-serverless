@@ -7,5 +7,7 @@
   "packages/core/src/util": "TODO: Add description",
   "packages/core/src/util/index.ts": "TODO: Add description",
   "packages/functions/src/list.ts": "endpoint for listing notes",
-  "packages/functions/src/update.ts": "TODO: Add description"
+  "packages/functions/src/update.ts": "TODO: Add description",
+  ".git/index": "TODO: Add description",
+  ".git/refs/heads/main": "TODO: Add description"
 }
