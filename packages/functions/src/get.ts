@@ -1,11 +1,13 @@
 import { Resource } from "sst";
-import { Util } from "@notes/core/util";
+import { Util } from "@sst-serverless/core/util";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { GetCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import { APIGatewayProxyEvent } from "aws-lambda";
+
 
 const dynamoDb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
 
-export const main = Util.handler(async (event) => {
+export const main = Util.handler(async (event:APIGatewayProxyEvent) => {
   const params = {
     TableName: Resource.Notes.name,
     // 'Key' defines the partition key and sort key of
