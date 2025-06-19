@@ -2,16 +2,20 @@
 import { table } from "./storage";
 
 //We are creating an API using SST’s Api component. It creates an Amazon API Gateway HTTP API.
-export const api = new sst.aws.ApiGatewayV2("Api",{
+export const api = new sst.aws.ApiGatewayV2("Api", {
   //By using the transform prop we are telling the API that we want the given props to be applied to all the routes in our API.
   transform: {
-    route:{
-      handler:{
+    route: {
+      handler: {
         //here our lambda function are allowed to access the DynamoDB table
-        link:[table],
-      }
-    }
-  }
+        link: [table],
+      },
+      args: {
+        // This tells our API that we want to use AWS_IAM across all our routes
+        auth: { iam: true },
+      },
+    },
+  },
 });
 
 //depending on the endpoint we request, it’ll forward that request to the appropriate Lambda function.
