@@ -7,13 +7,14 @@ export const api = new sst.aws.ApiGatewayV2("Api",{
   transform: {
     route:{
       handler:{
+        //here our lambda function are allowed to access the DynamoDB table
         link:[table],
       }
     }
   }
 });
 
-//The first route we are adding to our API is the POST /notes route. It’ll be used to create a note.
+//depending on the endpoint we request, it’ll forward that request to the appropriate Lambda function.
 api.route("POST /notes", "packages/functions/src/create.main");
 api.route("GET /notes/{id}", "packages/functions/src/get.main");
 api.route("GET /notes", "packages/functions/src/list.main");
