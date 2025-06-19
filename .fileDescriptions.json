@@ -3,6 +3,5 @@
   "packages": "App Code",
   "packages/functions": "The Lambda function code that is run when your API is invoked is placed in the this directory of my project",
   "packages/scripts": "this is for any one-off scripts we might create",
-  "packages/core": "contains our business logic",
-  ".git/index": "TODO: Add description"
+  "packages/core": "contains our business logic"
 }
