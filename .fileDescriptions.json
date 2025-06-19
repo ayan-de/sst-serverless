@@ -9,5 +9,6 @@
   "packages/functions/src/list.ts": "endpoint for listing notes",
   "packages/functions/src/update.ts": "TODO: Add description",
   ".git/index": "TODO: Add description",
-  ".git/refs/heads/main": "TODO: Add description"
+  ".git/refs/heads/main": "TODO: Add description",
+  ".fileignore": "contains file patterns to be ignored by .fileDescription.json"
 }
