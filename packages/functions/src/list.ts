@@ -16,7 +16,7 @@ export const main = Util.handler(async (event: APIGatewayProxyEvent) => {
     // 'ExpressionAttributeValues' defines the value in the condition
     // - ':userId': defines 'userId' to be the id of the author
     ExpressionAttributeValues: {
-      ":userId": "123",
+      ":userId": event.requestContext.authorizer?.iam.cognitoIdentity.identityId,
     },
   };
 

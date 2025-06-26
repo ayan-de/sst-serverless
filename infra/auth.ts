@@ -1,3 +1,6 @@
+//We want them to access our S3 bucket and API. 
+// /Both of which we are importing from api.ts and storage.ts respectively.
+
 import { api } from "./api";
 import { bucket } from "./storage";
 
@@ -24,6 +27,7 @@ export const identityPool = new sst.aws.CognitoIdentityPool("IdentityPool", {
   permissions: {
     authenticated: [
       {
+        //Amazon API Gateway has a format it uses to define its endpoints.We are building that here.
         actions: ["s3:*"],
         resources: [
           $concat(
@@ -32,6 +36,11 @@ export const identityPool = new sst.aws.CognitoIdentityPool("IdentityPool", {
           ),
         ],
       },
+      //In the above policy we are granting our logged in users access to the path 
+      //private/${cognito-identity.amazonaws.com:sub}/ within our S3 bucket’s ARN. Where
+      //cognito-identity.amazonaws.com:sub is the authenticated user’s federated identity id (their
+      //user id). So a user has access to only their folder within the bucket. This allows us to separate access
+      //to our user’s file uploads within the same S3 bucket.
       //We are creating an IAM policy to allow our authenticated users to access our API.
       {
         actions: ["execute-api:*"],
