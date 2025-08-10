@@ -1,3 +1,10 @@
+// • We are creating a handler function that we’ll use as a wrapper around our Lambda functions.
+// • It takes our Lambda function as the argument.
+// • We then run the Lambda function in a try/catch block.
+// • On success, we take the result and return it with a 200 status code.
+// • If there is an error then we return the error message with a 500 status code.
+// • Exporting the whole thing inside a Util module allows us import it as Util.handler. It also
+// lets us put other util functions in this module in the future.
 import { Context, APIGatewayProxyEvent } from "aws-lambda";
 export module Util {
   export function handler(
