@@ -1,11 +1,11 @@
-import { Resource } from "sst";
-import { Util } from "@sst-serverless/core/util";
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DeleteCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import { Resource } from 'sst';
+import { Util } from '@sst-serverless/core/util';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DeleteCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 
 const dynamoDb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
 
-export const main = Util.handler(async (event) => {
+export const main = Util.handler(async event => {
   const params = {
     TableName: Resource.Notes.name,
     Key: {

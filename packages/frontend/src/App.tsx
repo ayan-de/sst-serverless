@@ -1,10 +1,10 @@
-import Nav from "react-bootstrap/Nav";
-import { useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import { AppContext, AppContextType } from "./lib/contextLib";
+import Nav from 'react-bootstrap/Nav';
+import { useState } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import { AppContext, AppContextType } from './lib/contextLib';
 // import { LinkContainer } from "react-router-bootstrap";
-import "./App.css";
-import Routes from "./Routes.tsx";
+import './App.css';
+import Routes from './Routes.tsx';
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   function handleLogout() {
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App container py-3">
       <Navbar collapseOnSelect bg="light" expand="md" className="mb-3 px-3">
-        <Navbar.Brand className="fw-bold text-muted">Refhired</Navbar.Brand>
+        <Navbar.Brand className="fw-bold text-muted">NotesApp</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav>

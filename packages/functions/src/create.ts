@@ -1,16 +1,16 @@
-import * as uuid from "uuid";
-import { Resource } from "sst";
-import { Util } from "@sst-serverless/core/util";
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { APIGatewayProxyEvent } from "aws-lambda";
-import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import * as uuid from 'uuid';
+import { Resource } from 'sst';
+import { Util } from '@sst-serverless/core/util';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { APIGatewayProxyEvent } from 'aws-lambda';
+import { PutCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 
 const dynamoDb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
 
-export const main = Util.handler(async (event:APIGatewayProxyEvent) => {
+export const main = Util.handler(async (event: APIGatewayProxyEvent) => {
   let data = {
-    content: "",
-    attachment: "",
+    content: '',
+    attachment: '',
   };
   if (event.body != null) {
     data = JSON.parse(event.body);

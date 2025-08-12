@@ -4,9 +4,15 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces"
+  },
   "devDependencies": {
     "@tsconfig/node22": "^22",
+    "prettier": "^3.6.2",
     "typescript": "^5"
   },
   "dependencies": {

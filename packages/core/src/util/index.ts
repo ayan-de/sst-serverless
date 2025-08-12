@@ -5,7 +5,7 @@
 // • If there is an error then we return the error message with a 500 status code.
 // • Exporting the whole thing inside a Util module allows us import it as Util.handler. It also
 // lets us put other util functions in this module in the future.
-import { Context, APIGatewayProxyEvent } from "aws-lambda";
+import { Context, APIGatewayProxyEvent } from 'aws-lambda';
 export module Util {
   export function handler(
     lambda: (evt: APIGatewayProxyEvent, context: Context) => Promise<string>
