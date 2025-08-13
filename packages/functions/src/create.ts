@@ -16,6 +16,9 @@ export const main = Util.handler(async (event: APIGatewayProxyEvent) => {
     data = JSON.parse(event.body);
   }
   const params = {
+    //Here, Notes in Resource.Notes, is the name of our Table component from the Create a
+    //DynamoDB Table in SST chapter. By doing link: [table] earlier in this chapter, we are
+    //allowing our API to access our table
     TableName: Resource.Notes.name,
     Item: {
       // The attributes of the item to be created
