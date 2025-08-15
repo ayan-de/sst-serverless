@@ -4,9 +4,7 @@ export default function Home() {
     <div className="Home">
       <div className="lander">
         <h1>NotesApp</h1>
-        <p className="text-muted">
-          Simplifying receiving and giving job referrals for absolutely everyone
-        </p>
+        <p className="text-muted">A simple note taking app</p>
       </div>
     </div>
   );
