@@ -38,6 +38,8 @@ export default function Login() {
               autoFocus
               size="lg"
               type="email"
+              name="email"
+              autoComplete="username"
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
@@ -47,6 +49,8 @@ export default function Login() {
             <Form.Control
               size="lg"
               type="password"
+              name="password"
+              autoComplete="current-password"
               value={password}
               onChange={e => setPassword(e.target.value)}
             />

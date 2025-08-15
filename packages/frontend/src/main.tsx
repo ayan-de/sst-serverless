@@ -7,6 +7,7 @@ import App from './App.tsx';
 import { Amplify } from 'aws-amplify';
 import config from './config.ts';
 
+// Configure Amplify
 Amplify.configure({
   Auth: {
     mandatorySignIn: true,
