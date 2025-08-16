@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AppContext, type AppContextType } from './lib/contextLib';
 import { Auth } from 'aws-amplify';
+import { onError } from './lib/errorLib.ts';
 
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -19,9 +20,9 @@ function App() {
     try {
       await Auth.currentSession();
       userHasAuthenticated(true);
-    } catch (e) {
-      if (e !== 'No current user') {
-        alert(e);
+    } catch (error) {
+      if (error !== 'No current user') {
+        onError(error);
       }
     }
     setIsAuthenticating(false);
