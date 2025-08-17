@@ -1,8 +1,14 @@
 // Create an S3 bucket
 export const bucket = new sst.aws.Bucket('Uploads', {
   cors: {
-    // We are allowing all methods to access our API.
-    allowMethods: ['GET'],
+    // Allow the local dev frontend to access objects in the bucket.
+    // Include common methods and allow necessary headers so browser preflight (OPTIONS)
+    // succeeds when fetching objects from the app running at http://localhost:5173.
+    allowMethods: ['GET', 'HEAD', 'PUT', 'POST', 'DELETE'],
+    allowOrigins: ['http://localhost:5173'],
+    allowHeaders: ['*'],
+    exposeHeaders: ['ETag'],
+    maxAge: '3000 seconds',
   },
 });
 
